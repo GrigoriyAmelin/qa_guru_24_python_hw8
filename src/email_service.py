@@ -9,9 +9,11 @@ class EmailService:
     def __init__(self, email: Email):
         self.email = email
 
+
     @staticmethod
     def add_send_date() -> str:
         return datetime.datetime.now().strftime("%Y-%m-%d")
+
 
     def send_email(self) -> list:
         recipients_mails = []
