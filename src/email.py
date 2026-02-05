@@ -73,12 +73,12 @@ class Email:
     #     self.short_body = self.add_short_body()
 
     def __repr__(self) ->str:
-        return (f"(\n"
-                f"subject='{self.subject}',\n"
-                f"body='{self.body}',\n"
-                f"sender='{self.sender.masked}',\n"
-                f"recipients='{self.get_recipients_str()}',\n"
-                f"date='{self.date}',\n"
-                f"short_body='{self.short_body}',\n"
-                f"status='{self.status.value}'\n)"
+        return (f"\n"                
+                f"Статус: '{self.status.value}'\n"
+                f"Кому: '{self.get_recipients_str()}',\n"
+                f"От: '{self.sender.masked}',\n"
+                f"Тема: '{self.subject}',\n"
+                f"Дата: '{self.date}',\n"
+                # f"body='{self.body}',\n"
+                f"Письмо: '{self.short_body if self.short_body else self.body}'\n"
                 )
